@@ -38,6 +38,18 @@ const routes = [
         name: 'LoginIndex',
         component: () => import('@/views/Login')//路由懒加载
     },
+    {
+        path: '/search',
+        name: 'SearchIndex',
+        component: () => import('@/views/Search')//路由懒加载
+    },
+    {
+        path: '/article/:articleId',//动态路由
+        name: 'articleIndex',
+        component: () => import('@/views/article'),//路由懒加载
+        props: true,
+    },
+
 
 ]
 const router = new VueRouter({

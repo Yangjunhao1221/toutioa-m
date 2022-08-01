@@ -61,7 +61,7 @@ export default {
     return {
       SmsTimer: false,
       user: {
-        mobile: "13711111111",
+        mobile: "13911111111",
         code: "246810",
       },
       rules: {
@@ -100,7 +100,7 @@ export default {
 
       try {
         const res = await UserloginAPI(user);
-        console.log(res);
+        // console.log(res);
         this.$store.commit("updatedUserToken", res.data.data); //将获取到的token存入本地
         this.$toast.success("登录成功");
         this.$router.back(); //这个方法不严谨

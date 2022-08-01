@@ -26,6 +26,7 @@
 
 <script>
 export default {
+  name: "layoutIndex",
   data() {
     return {
       active: 0,

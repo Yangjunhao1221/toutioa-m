@@ -69,7 +69,7 @@ export default {
   name: "myIndex",
   created() {
     //判断用户是否登录，登录后加载用户信息
-    if (this.userInfo) {
+    if (this.$store.state.userToken) {
       this.sendGetUserAPI();
     }
   },
@@ -87,6 +87,7 @@ export default {
         this.userInfo = data.data;
       } catch (error) {
         this.$toast("登陆失败，请稍后再试");
+        this.$store.state.userToken = null;
       }
     },
     //退出

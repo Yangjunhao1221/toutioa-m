@@ -8,6 +8,7 @@ import Vant from 'vant'
 import 'vant/lib/index.css'
 import 'lib-flexible'
 import store from '@/store'
+import '@/utils/dayjs'//处理相对时间
 Vue.use(Vant);
 Vue.config.productionTip = false
 
